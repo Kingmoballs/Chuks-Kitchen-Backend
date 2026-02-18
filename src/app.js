@@ -3,6 +3,7 @@ const errorHandler = require("./shared/middlewares/errorHandler");
 
 // Routes Files
 const userRoutes = require("./modules/user/user.routes");
+const foodRoutes = require("./modules/food/food.routes");
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
     res.json({ message: "Chucks Kitchen API running" })
 });
 app.use("/api/users", userRoutes);
+app.use("/api/foods", foodRoutes);
 
 // Global Error Handler 
 app.use(errorHandler);
