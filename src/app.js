@@ -4,6 +4,7 @@ const errorHandler = require("./shared/middlewares/errorHandler");
 // Routes Files
 const userRoutes = require("./modules/user/user.routes");
 const foodRoutes = require("./modules/food/food.routes");
+const orderRoutes = require("./modules/order/order.routes");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api/users", userRoutes);
 app.use("/api/foods", foodRoutes);
+app.use("/api/orders", orderRoutes);
 
 // Global Error Handler 
 app.use(errorHandler);

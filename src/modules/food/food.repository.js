@@ -11,3 +11,7 @@ exports.getAvailableFoods = async () => {
 exports.getAllFoods = async () => {
     return Food.find();
 }
+
+exports.getFoodById = async (id) => {
+    return Food.findById(id);
+}
